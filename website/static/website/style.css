@@ -138,7 +138,12 @@ Navigation Links section
 -----------------------------------------*/
 .custom-navbar {
 margin-bottom: 0;
-background-color: #101010;
+transition: all 0.3s ease;
+padding: 20px 0;
+}
+.custom-navbar.sticky {
+    background-color: #101010;
+    padding: 0;
 }
 
 .custom-navbar .navbar-brand {
@@ -190,12 +195,11 @@ border-color: transparent;
 
 @media(min-width:768px) {
 .custom-navbar {
-    padding: 20px 0;
     border-bottom: 0;
     background: 0 0; 
 }
 .custom-navbar.top-nav-collapse {
-    background: #101010;
+    /* background: #101010; */
     padding: 0;
 }
 
@@ -612,13 +616,13 @@ background-attachment: fixed;
 
 
 /* Back top */
-.go-top {
+.go-top, .scroll-up-btn {
 background-color: #222;
 bottom: 2em;
 right: 2em;
 color: #ffffff;
 font-size: 32px;
-display: none;
+opacity: 0;
 position: fixed;
 text-decoration: none;
 width: 60px;
@@ -627,12 +631,17 @@ line-height: 60px;
 text-align: center;
 transition: all 0.4s ease-in-out;
 }
+.scroll-up-btn.show {
+    opacity: 1;
+}
 
 .go-top:hover {
 background: #f2545f;
 color: #ffffff;
 }
+.navbar {
 
+}
 
 /*---------------------------------------
 Social icon             
@@ -918,60 +927,7 @@ height: 66vh;
   
   
   
-  /*---------------------------------------
-    Navigation Links section              
-  -----------------------------------------*/
-  .custom-navbar {
-    margin-bottom: 0;
-    background-color: #101010;
-  }
-  
-  .custom-navbar .navbar-brand {
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 3rem;
-    line-height: 40px;
-  }
-  
-  .custom-navbar .nav li a {
-    color: #ddd;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-    line-height: 40px;
-    transition: all 0.4s ease-in-out;
-  }
-  
-  .custom-navbar .nav li a:hover {
-    background: transparent;
-    color: #ff4d4d;
-  }
-  
-  .custom-navbar .navbar-nav > li > a:hover,
-  .custom-navbar .navbar-nav > li > a:focus {
-  background-color: transparent;
-  }
-  
-  .custom-navbar .nav li.active > a {
-    background-color: transparent;
-    color: #ff4d4d;
-  }
-  
-  .custom-navbar .navbar-toggle {
-    border: none;
-    padding-top: 10px;
-  }
-  
-  .custom-navbar .navbar-toggle {
-    background-color: transparent;
-  }
-  
-  .custom-navbar .navbar-toggle .icon-bar {
-    background: #ffffff;
-    border-color: transparent;
-  }
-  
+ 
   /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
