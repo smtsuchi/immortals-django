@@ -29,3 +29,6 @@ def memberentry(request):
             return redirect('thankyou')
     context = {'form': form}
     return render(request, 'website/member-entry.html', context)
+    
+def thankyou(request):
+    return render(request, 'website/thank-you.html', context={})
