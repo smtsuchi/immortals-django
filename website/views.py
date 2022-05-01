@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from .forms import ApplicationForm
+from .forms import ApplicationForm, MemberEntryForm
 from .models import Application
 
 # Create your views here.
@@ -19,9 +19,9 @@ def apply(request):
     return render(request, 'website/apply.html', context)
 
 def memberentry(request):
-    form = ApplicationForm()
+    form = MemberEntryForm()
     if request.method == "POST":
-        form = ApplicationForm(request.POST)
+        form = MemberEntryForm(request.POST)
         print('posted')
         if form.is_valid():
             print('valid')
