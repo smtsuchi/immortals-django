@@ -76,3 +76,30 @@ body {
 .nav-brand:hover {
     color: #ffffff;
 }
+@media (max-width: 492px) {
+    .nav-brand {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 382px) {
+    .nav-brand {
+        font-size: 1.33rem;
+    }
+}
+.return-home {
+    background-color: #222;
+    bottom: 2em;
+    right: 2em;
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 2px;
+    text-decoration: none;
+}
+.return-home:hover {
+    background-color: #f2545f;
+    color: #ffffff;
+}
