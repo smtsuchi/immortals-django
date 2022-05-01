@@ -14,7 +14,7 @@ def apply(request):
         if form.is_valid():
             print('valid')
             form.save()
-            return redirect('home')
+            return redirect('thankyou')
     context = {'form': form}
     return render(request, 'website/apply.html', context)
 
@@ -26,6 +26,6 @@ def memberentry(request):
         if form.is_valid():
             print('valid')
             form.save()
-            return redirect('home')
+            return redirect('thankyou')
     context = {'form': form}
     return render(request, 'website/member-entry.html', context)
