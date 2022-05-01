@@ -17,3 +17,15 @@ def apply(request):
             return redirect('home')
     context = {'form': form}
     return render(request, 'website/apply.html', context)
+
+def memberentry(request):
+    form = ApplicationForm()
+    if request.method == "POST":
+        form = ApplicationForm(request.POST)
+        print('posted')
+        if form.is_valid():
+            print('valid')
+            form.save()
+            return redirect('home')
+    context = {'form': form}
+    return render(request, 'website/member-entry.html', context)
