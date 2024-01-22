@@ -141,6 +141,9 @@ margin-bottom: 0;
 transition: all 0.3s ease;
 padding: 20px 0;
 }
+.navbar-collapse.collapse.in, .collapsing {
+  background-color: #101010;
+}
 .custom-navbar.sticky {
     background-color: #101010;
     padding: 0;
@@ -203,6 +206,14 @@ border-color: transparent;
     padding: 0;
 }
 
+}
+.alert-banner{
+  position: fixed;
+  margin-top: 110px;
+  width: 60%;
+  z-index: 999;
+  left: 50%;
+  transform: translateX(-50%);  
 }
 
 
@@ -680,17 +691,28 @@ color: #333333;
 /*---------------------------------------
 Responsive styles            
 -----------------------------------------*/
-@media (max-width: 980px) {
-
-p {font-size: 13px;}
-
-.custom-navbar .navbar-brand {
-font-size: 2rem;
+@media (max-width: 1200px) {  
+  .custom-navbar .navbar-brand {
+  font-size: 2.2rem;
+  }
 }
+@media (max-width: 991px) {  
+  .alert-banner{
+    width: 100%;
+  }
+  .custom-navbar .navbar-brand {
+  font-size: 1.8rem;
+  }
+  .custom-navbar .nav li a{
+    font-size: 11px;
+    padding: 15px 11px;
+  }
+}
+@media (max-width: 980px) {
+p {font-size: 13px;}
 
 .custom-navbar .nav li a {
 font-size: 11px;
-line-height: 20px;
 }
 
 #intro { height: 65vh; }
